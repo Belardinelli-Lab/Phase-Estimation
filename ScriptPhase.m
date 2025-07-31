@@ -87,7 +87,7 @@ for file_idx = 1:length(file_list)
     fs = 1000;
     D = designfilt('bandpassfir', 'FilterOrder', 128, ...
         'CutoffFrequency1', 9, 'CutoffFrequency2', 13, 'SampleRate', fs);
-    offset_correction = 50;
+    offset_correction = 4;
 
     num_trials = length(filtered_data.trial);                                                   % Get the number of trials
     output = struct('phase', [], 'amplitude', []);                                              % Initialize the output structure
